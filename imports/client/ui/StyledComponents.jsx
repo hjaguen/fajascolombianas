@@ -11,49 +11,17 @@ export const
         grid-template-columns: 0.8fr 1fr 1.2fr;
         grid-template-areas:
             "nb nb nb"
-            ". v ."
-            ". c ."
+            "c c c"
             ${bloCol}
             "min fot tex"
             "ft ft ft"
         ;
-        background-image: url(/${conf.fonsPrincipal});
-        background-size: ${conf.backgroundSize};
-        background-repeat: ${conf.backgroundRepeat};
-        background-attachment: ${conf.backgroundAttachment};
+        background-color: #5F4B8B;
+        // background-image: url(/${conf.fonsPrincipal});
+        // background-size: ${conf.backgroundSize};
+        // background-repeat: ${conf.backgroundRepeat};
+        // background-attachment: ${conf.backgroundAttachment};
     `,
-
-    // MainLayout = styled.div.attrs({
-    //   className: 'container'
-    // })`
-    //     width: 100%;
-    //     height: 100%;
-    //     padding: 0px;
-    //     display: grid;
-    //     grid-template-columns: auto auto auto;
-    //     grid-template-rows: auto auto auto;
-    //     grid-template-areas:
-    //     "navbar navbar navbar"
-    //     "filtro content content"
-    //     ${conf.layoutTemplateArea}
-    //     "present present present"
-    //     "footer footer footer";
-    //     background-image: url(/${conf.fonsPrincipal});
-    //     background-size: ${conf.backgroundSize};
-    //     background-repeat: ${conf.backgroundRepeat};
-    //     background-attachment: ${conf.backgroundAttachment};
-    // `,
-
-    // HomeLayout = styled.div.attrs({
-    //   className: 'container'
-    // })`
-    //   display: grid;
-    //   grid-template-columns: auto;
-    //   grid-template-rows: auto auto;
-    //   grid-template-areas:
-    //   "video"
-    //   "content"
-    // `,
 
     ProductsLayout = styled.div`
       display: grid;
@@ -65,13 +33,16 @@ export const
 
     MainNavBar = styled.nav`
         grid-area: nb;
-        //position: sticky;
+        position: sticky;
         top: 0;
         height: min-height;
-        background-color: rgba(255, 255, 255, 0.25);
+        background-color: rgb(232, 0, 121);
         transition: all 1s ease;
         z-index: 100;
         font-family: 'Comfortaa', sans-serif;
+        &:hover {
+          background-color: white;
+      }
     `,
 
     PosicionFiltro = styled.div`
@@ -80,17 +51,19 @@ export const
 
 
     Filtro = styled.div.attrs({
-      className: 'filtro'
+      className: 'filtro col-sm-6'
     })`
-        width: 90%;
-        max-width: 300px;
-        background: rgba(255, 255, 255, 0.25);
-        margin: 2em 2em;
-        padding: 2em;
+        //width: 100%;
+        // max-width: 300px;
+        // background: rgba(255, 255, 255, 0.25);
+        //margin: 2em 2em;
+        //padding: 2em;
         borderRadius: 1em;
-        position: -webkit-sticky;
         position: sticky;
-        top: 160px;
+        position: -webkit-sticky;
+        //top: 10%;
+        display:inline-block;
+        float:right;
 
         * {
             transition: all 1s ease;
@@ -137,9 +110,9 @@ export const
 
     NavTitle = styled.h1`
         margin-top: 0;
-        font-size: 2.5em;
-        color: blue;
-        text-shadow: 8px 5px 10px black;
+        font-size: 1.5em;
+        color: white;
+        //text-shadow: 8px 5px 10px black;
         font-family: 'Comfortaa', sans-serif;
         font-weight: 700;
 
@@ -195,7 +168,7 @@ export const
       padding: 15px;
       // padding-top: 7px !important;
       // padding-bottom: 7px !important;
-      color: blue;
+      color: white;
       font-size: 1.25em;
 	    text-shadow: 0 1px 0 rgba(255,255,255,.25);
       font-family: 'Roboto', sans-serif;
@@ -210,7 +183,7 @@ export const
     aBrand = styled.a.attrs({
       className: 'navbar-brand nombre-marca'
     })`
-      margin-bottom: 20px;
+      //margin-bottom: 20px;
 
       h1 {
           transition: color 3s;
@@ -228,6 +201,6 @@ export const
     footer = styled.footer.attrs({
       className: 'mdl-mega-footer'
     })`
-      background-color: black;
+      background-color: rgb(232, 0, 121);
     `
 ;

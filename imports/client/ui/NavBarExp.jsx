@@ -68,7 +68,7 @@ export default class NavbarAdaptat extends Component {
                         <Stylo.aBrand href="/" >
                           <Stylo.NavTitle>{conf.tituloPagina}</Stylo.NavTitle>
                         </Stylo.aBrand>
-                          <ul className="nav navbar-nav navbar-right">
+                          {/*<ul className="nav navbar-nav navbar-right">
                             <Stylo.liNav>
                                 <Stylo.aLink className="emailytel">{conf.emailContacto}</Stylo.aLink>
                             </Stylo.liNav>
@@ -87,14 +87,14 @@ export default class NavbarAdaptat extends Component {
                             <Stylo.liNav>
                               <Stylo.aLink href={`https://api.whatsapp.com/send?phone=${conf.whatsappMsg}&text=Hola%2C%20necesito%20información`} target="_blank"> <i className="fa fa-whatsapp fa-2x"></i></Stylo.aLink>
                             </Stylo.liNav>
-                        </ul>
+                        </ul>*/}
 
-                        <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        {/*<button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span className="sr-only">Toggle navigation</span>
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
-                        </button>
+                        </button>*/}
 
                     </div>
                     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

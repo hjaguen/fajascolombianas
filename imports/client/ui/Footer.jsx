@@ -67,7 +67,7 @@ export default class FootrAdaptat extends Component {
             <div>
                 <Stylo.footer size="mega">
                     <FooterSection type="middle">
-                        <FooterDropDownSection title="Información">
+                        {/*<FooterDropDownSection title="Información">
                             <FooterLinkList>
                                 <a href=""
                                   data-toggle="modal"
@@ -90,25 +90,25 @@ export default class FootrAdaptat extends Component {
                                   FAQ
                                 </a>
                             </FooterLinkList>
-                        </FooterDropDownSection>
-                        <FooterDropDownSection title="Contáctanos">
+                        </FooterDropDownSection>*/}
+                        {/*<FooterDropDownSection title="Contáctanos">
                             <FooterLinkList>
                                 <a href="#">{conf.telContacto}</a>
                                 <a href="#">{conf.emailContacto}</a>
                                 <a href={`https://api.whatsapp.com/send?phone=${conf.whatsappMsg}&text=Hola%2C%20necesito%20información`}>Click para WhatsApp</a>
                             </FooterLinkList>
-                        </FooterDropDownSection>
+                        </FooterDropDownSection>*/}
 
-                        <FooterDropDownSection title="Nuestras Tiendas">
+                        {/*<FooterDropDownSection title="Nuestras Tiendas">
                             <FooterLinkList>
                                 <a href="http://fajascolombianas.es" target="_blank">Fajas Colombianas</a>
                                 <a href="http://jeanscolombianos.es" target="_blank">Jeans Colombianos</a>
                                 <a href="http://vestidosdefiestacolombianos.es" target="_blank">Vestidos de Fiesta</a>
                                 <a href="http://ropacolombianaenrebajas.com" target="_blank">Outlet</a>
                             </FooterLinkList>
-                        </FooterDropDownSection>
+                        </FooterDropDownSection>*/}
 
-                        <FooterDropDownSection title="Escríbenos">
+                        {/*<FooterDropDownSection title="Escríbenos">
                             <form >
                               <div className="form-group">
                                 <label htmlFor="emailCliente">Dirección de Email:</label>
@@ -128,7 +128,7 @@ export default class FootrAdaptat extends Component {
                                 }}
                               >Enviar</button>
                             </form>
-                        </FooterDropDownSection>
+                        </FooterDropDownSection>*/}
                     </FooterSection>
 
 
@@ -140,7 +140,7 @@ export default class FootrAdaptat extends Component {
 
 
 
-                    <div className="modal fade" id="about" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    {/*<div className="modal fade" id="about" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
                       <div className="modal-dialog" role="document">
                         <div className="modal-content">
                           <div className="modal-header">
@@ -212,14 +212,14 @@ export default class FootrAdaptat extends Component {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div>*/}
 
 
 
 
 
-                    <FacebookShareButton url="http://www.facebook.com/latinmoda" />
-                    <TwitterShareButton url="http://twitter.com/latinmoda"/>
+                    {/*<FacebookShareButton url="http://www.facebook.com/latinmoda" />
+                    <TwitterShareButton url="http://twitter.com/latinmoda"/>*/}
                 </Stylo.footer>
             </div>
         );

@@ -165,7 +165,12 @@ export class MarquesSUBCAT extends Component {
             <div
                 className={(window.innerWidth<500)?`amaga`:`mostra`}
                 style={{
-                    margin: `1em auto`
+                    //margin: `1em auto`
+                    //marginTop:`2em`,
+                    marginLeft:`5em`,
+                    marginRight:`1em`,
+                    width:`20%`,
+                    display:`inline-block`
                 }}
             >
                 <Select
@@ -331,7 +336,11 @@ export class TallesSUBCAT extends Component {
             <div
                 className={(window.innerWidth<500)?`amaga`:`mostra`}
                 style={{
-                    margin: `3em auto`
+                    //margin: `3em auto`
+                    //marginTop:`2em`,
+                    marginRight:`0.5em`,
+                    width:`20%`,
+                    display:`inline-block`
                 }}
             >
                 <Select
@@ -499,10 +508,11 @@ export class ColorsSUBCAT extends Component {
             <div
                 className={`filtreC ${(window.innerWidth<500)?`amaga`:`mostra`}`}
                 style={{
-                    marginTop: `3em`,
-                    display: `flex`,
+                    //marginTop: `2em`,
                     justifyContent: `center`,
-                    flexWrap: `wrap`
+                    flexWrap: `wrap`,
+                    width:`40%`,
+                    display:`inline-block`
                 }}
             >
                 {

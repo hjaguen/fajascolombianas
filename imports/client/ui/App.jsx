@@ -48,6 +48,14 @@ import {
     BuscadorColumnaSUBCAT
 } from './Filtros.jsx';
 
+import Slider from './slider.jsx';
+
+const images = [
+  './fajas-deportivas-latinmoda.png',
+  './hermosas-fajas-latinmoda.png',
+  './fajas-latinmoda-altacompresion.png',
+  './fajas-masculinas-latinmoda.png',
+]
 
 let variables = {
     apiUrl: "http://api.colombiaespassion.net",
@@ -375,16 +383,11 @@ export default class App extends Component {
                     )}/>
 
                     <Route exact path="/" render={() => ([
-                        <Stylo.MainVideo
-                            key="video"
-                        >
-                            {conf.video_latinmoda}
-                        </Stylo.MainVideo>
-                        ,
                         <Stylo.MainContent
                             key="content"
                         >
-    		              <h1>{conf.subtituloPagina}</h1>
+    		              <Slider images={images} />
+                          <h1>{conf.subtituloPagina}</h1>
     		              <h2>{conf.titulo_contenido}</h2>
     		              {conf.texto_contenido}
     		              {conf.bloque_info}

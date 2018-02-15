@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Navbar, Nav, NavItem, NavDropdown, MenuItem, Grid, Row, Col } from 'react-bootstrap';
-
+import * as info from './addInfo.jsx';
 
 export let
 
@@ -40,7 +40,7 @@ export let
     ,
 
 // Estilo para modulo de filtro
-     filtres_posicio = `columna` // `columna` | `bloque`
+     filtres_posicio = `bloque` // `columna` | `bloque`
      ,
     // ,
     //             layoutTemplateArea =
@@ -90,7 +90,139 @@ export let
         <section id="content-1-2" className="content-block content-1-2">
             <div className="container">
                 <div className="row">
-                    <div className="col-sm-6">
+                    <section title="Información">
+                        <ul>
+                            <li>
+                                <a href=""
+                                  data-toggle="modal"
+                                  data-target="#about">
+                                  Quiénes Somos
+                                </a>
+                                <a href=""
+                                  data-toggle="modal"
+                                  data-target="#terms">
+                                  Términos y Condiciones
+                                </a>
+                                <a href=""
+                                  data-toggle="modal"
+                                  data-target="#cookies">
+                                  Políticas de Cookies
+                                </a>
+                                <a href=""
+                                  data-toggle="modal"
+                                  data-target="#faq">
+                                  FAQ
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                        <section title="Contáctanos">
+                            <ul>
+                                <li>
+                                    <a href="#">{telContacto}</a>
+                                    <a href="#">{emailContacto}</a>
+                                    <a href={`https://api.whatsapp.com/send?phone=${whatsappMsg}&text=Hola%2C%20necesito%20información`}>Click para WhatsApp</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section title="Escríbenos">
+                            <form >
+                              <div className="form-group">
+                                <label htmlFor="emailCliente">Dirección de Email:</label>
+                                <input type="email" className="form-control" id="emailCliente" placeholder="Introduzca su Email" ref={input => this.from = input} />
+                              </div>
+                              <div className="form-group">
+                                <label htmlFor="mensajeCliente">Mensaje:</label>
+                                <textarea className="form-control" id="mensajeCliente" placeholder="Escriba su Mensaje" ref={ta => this.text = ta }/>
+                              </div>
+                              <button
+                                className="btn btn-default"
+                                onClick={(ev)=>{
+                                    ev.preventDefault();
+                                    ev.stopPropagation();
+                                    Meteor.call('enviaCorreu', this.from.value, this.text.value );
+                                    alert("Mensaje enviado. ¡Gracias por contactar con nosotros!");
+                                }}
+                              >Enviar</button>
+                            </form>
+                        </section>
+                    
+
+                
+                    <div className="modal fade" id="about" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div className="modal-dialog" role="document">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 className="modal-title" id="myModalLabel">{info.titleAbout}</h4>
+                          </div>
+                          <div className="modal-body">
+                            {info.contAbout}
+                          </div>
+                          <div className="modal-footer">
+                            <button type="button" className="btn btn-default" data-dismiss="modal">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <div className="modal fade about-modal-lg" id="terms" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div className="modal-dialog modal-lg" role="document">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 className="modal-title" id="myModalLabel">{info.titleTerms}</h4>
+                          </div>
+                          <div className="modal-body">
+                            {info.contTerms}
+                          </div>
+                          <div className="modal-footer">
+                            <button type="button" className="btn btn-default" data-dismiss="modal">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <div className="modal fade about-modal-lg" id="cookies" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div className="modal-dialog modal-lg" role="document">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 className="modal-title" id="myModalLabel">{info.titleCookies}</h4>
+                          </div>
+                          <div className="modal-body">
+                            {info.contCookies}
+                          </div>
+                          <div className="modal-footer">
+                            <button type="button" className="btn btn-default" data-dismiss="modal">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <div className="modal fade" id="faq" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div className="modal-dialog" role="document">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 className="modal-title" id="myModalLabel">{info.titleFAQ}</h4>
+                          </div>
+                          <div className="modal-body">
+                            {info.contFAQ}
+                          </div>
+                          <div className="modal-footer">
+                            <button type="button" className="btn btn-default" data-dismiss="modal">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/*<div className="col-sm-6">
                         <h3>Más Información</h3>
                         <p className="lead">Contacta con nuestro personal especializado.</p>
                         <p>Click en la opción que mas te guste y contacta de inmediato con nuestros asesores para ayudarte en lo que necesitas.
@@ -103,7 +235,7 @@ export let
                                 <a href="http://bit.ly/SAC_Latinmoda" target="_blank" className="btn btn-block btn-success"><span className="fa fa-check"></span> WhatsApp</a>
                             </div>
                         </div>
-                    </div>
+                    </div>*/}
                     {/*<div className="col-sm-5 col-sm-offset-1">
                         <img className="img-rounded img-responsive" src="./slide3.jpg"/>
                     </div>*/}
