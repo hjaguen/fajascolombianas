@@ -6,7 +6,7 @@ export default class Slider extends Component {
         auto: true,
         autoTime: 10000,
         images: [],
-        rate: 0.5,
+        rate: 0.2,
     }
     style = {
         container: {

@@ -133,7 +133,8 @@ export default class FootrAdaptat extends Component {
 
 
                     <FooterSection type="bottom" logo={conf.tituloPagina}>
-                      <p>{`Copyright © ${dat.getFullYear()} - Ropa Colombiana en España.`}</p>
+                      <p className="col-sm-6">{`Copyright © ${dat.getFullYear()} - Ropa Colombiana en España.`}</p>
+                      {conf.bloque_info}
                     </FooterSection>
 
 

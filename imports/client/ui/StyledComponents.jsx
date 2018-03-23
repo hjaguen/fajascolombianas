@@ -8,10 +8,11 @@ export const
     LO = styled.div`
         padding: 0px;
         display: grid;
-        grid-template-columns: 0.8fr 1fr 1.2fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
             "nb nb nb"
-            "c c c"
+            "s s s"
+            ". c sb"
             ${bloCol}
             "min fot tex"
             "ft ft ft"
@@ -36,12 +37,10 @@ export const
         position: sticky;
         top: 0;
         height: min-height;
-        background-color: rgb(232, 0, 121);
+        background-color: rgba(232, 0, 121, 0.6);
         transition: all 1s ease;
         z-index: 100;
         font-family: 'Comfortaa', sans-serif;
-        &:hover {
-          background-color: white;
       }
     `,
 
@@ -125,9 +124,9 @@ export const
         }
     `,
 
-    MainVideo = styled.div`
-      grid-area: v;
-      padding: 20px;
+    MainSlider = styled.div`
+      grid-area: s;
+      margin-top: -10%;
     `,
 
     MainContent = styled.div.attrs({
@@ -143,24 +142,56 @@ export const
           font-family: 'Comfortaa', sans-serif;
           font-size: 2.5em;
           font-weight: 700;
+
+          @media (min-width:351px) and (max-width:500px) {
+          font-size: 1.4em;
+          }
+
+          @media (max-width:350px) {
+          font-size: 1.1em;
+          }
         }
 
         > h2 {
           font-family: 'Comfortaa', sans-serif;
           font-size: 2em;
           font-weight: 500;
+
+          @media (min-width:351px) and (max-width:500px) {
+          font-size: 1.4em;
+          }
+
+          @media (max-width:350px) {
+            font-size: 1.1em;
+          }
         }
 
         > h3 {
           font-family: 'Comfortaa', sans-serif;
           font-size: 1.7em;
           font-weight: 300;
+
+          @media (min-width:351px) and (max-width:500px) {
+            font-size: 1.2em;
+          }
+
+          @media (max-width:350px) {
+            font-size: 0.9em;
+          }
         }
 
         p {
           font-family: 'Comfortaa', sans-serif;
           font-size: 1.2em;
           font-weight: 100;
+
+          @media (min-width:351px) and (max-width:500px) {
+          font-size: 1em;
+          }
+
+          @media (max-width:350px) {
+            font-size: 0.80em;
+          }
         }
     `,
 
@@ -202,5 +233,21 @@ export const
       className: 'mdl-mega-footer'
     })`
       background-color: rgb(232, 0, 121);
+    `
+    ,
+
+    Slider = styled.div`
+      grid-area: s;
+      margin-top: -120px;
+      width:90%;
+      height:50%;
+    `
+    ,
+    social = styled.div`
+      grid-area: sb;
+      position: fixed; 
+      right: -1%; 
+      top: 200px; 
+      z-index: 2000; 
     `
 ;

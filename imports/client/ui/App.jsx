@@ -49,6 +49,8 @@ import {
 } from './Filtros.jsx';
 
 import Slider from './slider.jsx';
+import Cookies from './cookies';
+import SocialBar from './SocialBar';
 
 const images = [
   './fajas-deportivas-latinmoda.png',
@@ -382,18 +384,30 @@ export default class App extends Component {
                             />
                     )}/>
 
+                     {/*<Route exact path="/" render={() => ([
+                        <Stylo.Slider>
+                            <Slider images={images} />
+                        </Stylo.Slider>
+                    ])}/>*/}
+
                     <Route exact path="/" render={() => ([
+                        <Stylo.MainSlider
+                            key="slider"
+                        >
+                            {conf.slider}
+                        </Stylo.MainSlider>
+                        ,
                         <Stylo.MainContent
                             key="content"
                         >
-    		              <Slider images={images} />
                           <h1>{conf.subtituloPagina}</h1>
     		              <h2>{conf.titulo_contenido}</h2>
-    		              {conf.texto_contenido}
-    		              {conf.bloque_info}
-
     		            </Stylo.MainContent>
                     ])}/>
+
+                    <Route path="/" render={() => (
+                        <SocialBar />
+                    )}/>
 
                     <Route exact path="/categoria/:subcategoryId" render={({ match, history, location }) => {
                         let
@@ -782,6 +796,12 @@ export default class App extends Component {
                             />
                         );
                     }}/>
+
+                    <Route path="/" render={() => (
+                        <div>
+                            <Cookies />
+                        </div>
+                    )}/>
 
                     <Route path="/" render={() => (
                         <div

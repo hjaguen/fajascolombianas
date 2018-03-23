@@ -116,39 +116,8 @@ export let
                             </li>
                         </ul>
                     </section>
-                        <section title="Contáctanos">
-                            <ul>
-                                <li>
-                                    <a href="#">{telContacto}</a>
-                                    <a href="#">{emailContacto}</a>
-                                    <a href={`https://api.whatsapp.com/send?phone=${whatsappMsg}&text=Hola%2C%20necesito%20información`}>Click para WhatsApp</a>
-                                </li>
-                            </ul>
-                        </section>
-                        <section title="Escríbenos">
-                            <form >
-                              <div className="form-group">
-                                <label htmlFor="emailCliente">Dirección de Email:</label>
-                                <input type="email" className="form-control" id="emailCliente" placeholder="Introduzca su Email" ref={input => this.from = input} />
-                              </div>
-                              <div className="form-group">
-                                <label htmlFor="mensajeCliente">Mensaje:</label>
-                                <textarea className="form-control" id="mensajeCliente" placeholder="Escriba su Mensaje" ref={ta => this.text = ta }/>
-                              </div>
-                              <button
-                                className="btn btn-default"
-                                onClick={(ev)=>{
-                                    ev.preventDefault();
-                                    ev.stopPropagation();
-                                    Meteor.call('enviaCorreu', this.from.value, this.text.value );
-                                    alert("Mensaje enviado. ¡Gracias por contactar con nosotros!");
-                                }}
-                              >Enviar</button>
-                            </form>
-                        </section>
-                    
-
-                
+                        
+                                  
                     <div className="modal fade" id="about" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
                       <div className="modal-dialog" role="document">
                         <div className="modal-content">
@@ -243,6 +212,19 @@ export let
             </div>
         </section>
     </div>
+    ,
+
+    slider =
+    <div> 
+        <div className="slider">   
+            <div className="contenedor-img imagenes-slider">
+                <img src="./fajas-deportivas-latinmoda.png"/>
+                <img src="./hermosas-fajas-latinmoda.png"/>
+                <img src="./fajas-latinmoda-altacompresion.png"/>
+                <img src="./fajas-masculinas-latinmoda.png"/>
+            </div>
+        </div>
+    </div> 
 
     // ,
 
